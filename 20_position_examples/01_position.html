@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Position Example</title>
+   <style>
+      /* absolut & relative */
+      .common {
+         font-size: 30px;
+         color: #fff;
+      }
+
+      .first, .first-1, .first-2 {
+         background-color: green;
+      }
+
+      .second {
+         background-color: red;
+         position: relative;
+         top: 10px;
+         left: 10px;
+      }
+
+      .third, .third-1, .third-2 {
+         background-color: blue;
+      }
+
+      .parent {
+         position: relative;
+      }
+
+      .second-1 {
+         background-color: hotpink;
+         position: absolute;
+         top: 0;
+      }
+
+      .third-1 {
+         height: 50px;
+      }
+
+      .uncle, .uncle-fixed {
+         background-color: grey;
+      }
+
+      /* another example */
+      .parent-1{
+         background: #43d866;
+         width: 250px;
+         border-radius: 4px;
+         padding: 2px;
+      }
+
+      .input {
+         position: relative;
+         top: 0;
+         left: 150px;
+      }
+
+      /* fixed */
+      .second-2 {
+         background-color: salmon;
+         position: fixed;
+      }
+   </style>
+</head>
+<body>
+   <!-- absolute / relative -->
+   <div class="first common">First</div>
+   <div class="second common">Second</div>
+   <div class="third common">Third</div>
+   <br><br><br>
+   
+   <div class="uncle common">Uncle</div>
+   <div class="parent">
+      <div class="first-1 common">First</div>
+      <div class="second-1 common">Second</div>
+      <div class="third-1 common">Third</div>
+   </div>
+   <br><br><br>
+   <!-- fixed -->
+   <div class="uncle-fixed common">Uncle</div>
+   <div class="parent-fixed">
+      <div class="first-2 common">First</div>
+      <div class="second-2 common">Second</div>
+      <div class="third-2 common">Third</div>
+   </div>
+   <br><br><br>
+
+   <!-- another example -->
+   <div class="parent-1">
+      <div class="a">Some Text</div>
+      <div class="a">Some Other Text</div>
+      <input class="input" type="button" value="click me">
+   </div>
+</body>
+</html>
