@@ -62,6 +62,7 @@
     * [Sticky](#sticky)
     * [Positioning Properties](#positioning-properties)
     * [Summary of CSS Positioning](#summary-of-css-positioning)
+* **[Styling a Form](#styling-a-form)**
 
 ## CSS Basics
 
@@ -1059,5 +1060,119 @@ img {
 | Sticky     | Nearest scrollable ancestor | Partially                 | Sticks at defined position |
 
 >See full source code for this section [11-position.html](https://github.com/sidneyshafer/css-sandbox/blob/master/src/11-position.html)
+
+<kbd> <br> [Back to Top](#table-of-contents) <br> </kbd>
+
+## Styling a Form
+>**Full Code example in [12-form-styling.html](https://github.com/sidneyshafer/css-sandbox/blob/master/source-code/12-form-styling.html)**
+
+**Code Breakdown**
+>**Outer Container (`#container`)**
+```
+#container {
+   max-width: 400px;
+   margin: 30px auto;
+   padding: 20px;
+}
+```
+* Restricts the form's width to a maximum of 400px.
+* Centers the form using `margin: 30px auto;` (horizontal centering via auto and `30px` top margin).
+* Adds padding around the content for spacing.
+
+>**Form Wrapper (`.form-wrap`)**
+```
+.form-wrap {
+   background: #fff;
+   padding: 15px 25px;
+}
+```
+* Adds a white background and provides inner spacing with padding.
+
+>**Headings and Paragraphs**
+```
+.form-wrap h1, .form-wrap p {
+    text-align: center;
+}
+
+.form-wrap h1 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+```
+* Aligns the headings and description text in the center.
+* Adds vertical space (margin) to `<h1>` elements for better spacing.
+
+>**Form Groups**
+```
+.form-wrap .form-group {
+    margin-top: 15px;
+    color: #333;
+}
+
+.form-wrap .form-group label {
+    display: block;
+    color: #666;
+}
+```
+* Each input group is separated with `margin-top: 15px`.
+* Labels are displayed as block-level elements, ensuring they appear above the input fields.
+
+>**Input Fields**
+```
+.form-wrap .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: #ddd 1px solid;
+    border-radius: 5px;
+}
+```
+* Input fields span the full width of their container (`width: 100%`).
+
+>**Submit Button**
+```
+.form-wrap button {
+    display: block;
+    color: #fff;
+    font-size: 16px;
+    width: 100%;
+    background: #49c1a2;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.form-wrap button:hover {
+    background: #37a08e;
+}
+```
+* The button is styled as a block-level element to occupy the full width of the form.
+* Background color is a vibrant teal (`#49c1a2`), changing to a darker shade on `hover` (`#37a08e`).
+
+>**Bottom Text**
+```
+.form-wrap .bottom-text {
+   font-size: 13px;
+   margin-top: 20px;
+}
+```
+* Defines font size and margin top styles to a text below the form.
+
+>**Footer**
+```
+footer {
+   color: #fff;
+   text-align: center;
+   margin-top: 10px;
+}
+footer a {
+   color: #49c1a2;
+}
+```
+* Centers the footer text and uses white as the main color.
+* Links in the footer are styled with the same teal color as the button.
+
+>See full source code for this section [12-form-styling.html](https://github.com/sidneyshafer/css-sandbox/blob/master/source-code/12-form-styling.html)
 
 <kbd> <br> [Back to Top](#table-of-contents) <br> </kbd>
