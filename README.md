@@ -24,6 +24,10 @@
     * [Line Height](#line-height)
     * [Font Weight](#font-weight)
     * [Font Style](#font-style)
+* **[Colors](#colors)**
+    * [The Color Property](#the-color-property)
+    * [Color Definitions in the CSS](#color-definitions-in-the-css)
+    * [Colors Best Practices](#color-best-practices)
 
 ## CSS Basics
 
@@ -234,5 +238,63 @@ body {
 * The `italic` value applies an italic style to the font, slanting it to the right.
 
 >See full source code for this section [03-fonts.html](https://github.com/sidneyshafer/css-sandbox/blob/master/03-fonts.html)
+
+<kbd> <br> [Back to Top](#table-of-contents) <br> </kbd>
+
+## Colors
+
+### The `color` Property
+* The `color` property is used to set the text color of an element.
+* The value of the `color` property can be specified using:
+    * Named colors
+    * RGB values
+    * Hexadecimal values
+
+### Color Definitions in the CSS
+
+**Color Name**
+```
+h1 {
+   color: red;
+}
+```
+* The text color is set to `red`, a predefined color name.
+* CSS supports a set of standard color names (e.g., red, blue, green, etc.). 
+* While convenient, they are limited in number and often not specific enough for detailed designs.
+
+**RGB Color**
+```
+h2 {
+   color: rgb(255, 255, 120);
+}
+```
+* The `rgb()` function allows specifying colors using the Red, Green, and Blue values (in that specific order).
+* Each color value (Red, Green, and Blue) can range from 0 (none of that color) to 255 (full intensity of that color).
+* RGB provides precise control over the color, and allows for blending and transparency when combined with `rgba()`.
+* In the example above:
+    * Red: Full intensity (255).
+    * Green: Full intensity (255).
+    * Blue: Medium intensity (120).
+
+**Hexadecimal Color**
+```
+h3 {
+   color: #088faf;
+}
+```
+* Hexadecimal colors are defined using a `#` followed by six hexadecimal digits (base 16).
+* The format is `#RRGGBB`, where:
+    * `RR` represents the red component.
+    * `GG` represents the green component.
+    * `BB` represents the blue component.
+* The values range from 00 to FF, which is the same as 0 to 255 in RGB. 
+* Setting all three values to 00 results in black, and setting all three values to FF results in white.
+* Some common hexadecimal colors include: `#333` (dark gray), `#ccc` (medium-light gray), `#ddd` (lighter gray), `#f4f4f4` (very light gray)
+
+### Color Best Practices
+* Use a consistent color format throughout a project for maintainability.
+* Consider accessibility, such as sufficient contrast for readability.
+
+>See full source code for this section [04-colors.html](https://github.com/sidneyshafer/css-sandbox/blob/master/04-colors.html)
 
 <kbd> <br> [Back to Top](#table-of-contents) <br> </kbd>
