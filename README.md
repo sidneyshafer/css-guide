@@ -44,6 +44,9 @@
     * [Text Alignment](#text-alignment)
     * [Clearfix](#clearfix)
     * [Float Layout](#float-layout)
+* **[Styling Links and Buttons](#styling-links-and-buttons)**
+    * [Styling Links](#styling-links-a)
+    * [Styling Buttons](#styling-buttons)
 
 ## CSS Basics
 
@@ -670,5 +673,86 @@ The `text-align` property aligns text within an element.
 * `width: 30%;`: Specifies a width for `#box-3` to occupy 30% of the container's width.
 
 >See full source code for this section [07-float-align.html](https://github.com/sidneyshafer/css-sandbox/blob/master/source-code/07-float-align.html)
+
+<kbd> <br> [Back to Top](#table-of-contents) <br> </kbd>
+
+## Styling Links and Buttons
+
+### Styling Links (`<a>`)
+```
+a {
+    color: #333;
+    text-decoration: none;
+}
+```
+* `color: #333;`: Sets the text color of links to dark gray.
+* `text-decoration: none;`: Removes the default underline styling of links.
+
+**Hover Effect**
+```
+a:hover {
+   color: coral;
+   text-decoration: underline;
+}
+```
+* `a:hover`: Selector that targets the link when a user hovers over it.
+* `color: coral;`: Changes the link color to a coral shade on hover.
+* `text-decoration: underline;`: Changes the underline style to 'underline' on hover.
+
+**Active State**
+```
+a:active {
+   color: red;
+}
+```
+* `a:active`: Selector that targets the link when it is actively being clicked.
+* `color: red;`: Changes the link color to red during the click action.
+
+**Visited State**
+```
+a:visited {
+    color: red;
+}
+```
+* `a:visited`: Selector that targets links a user has previously visited.
+* `color: red;`: Changes the link color to red once a user has visited the link.
+
+### Styling Buttons
+
+**Example - Using CSS Classes**
+```
+<button class="btn">My Button</button>
+```
+```
+.btn {
+    background: #4c6ca0;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+```
+* `background: #4c6ca0;`: Sets a dark blue background for the button.
+* `color: #fff;`: Sets the text color to white.
+* `border: none;`: Removes any default borders.
+* `font-size: 16px;`: Sets the font size to 16 pixels.
+* `padding: 10px 20px;`: Adds internal spacing around the text.
+* `border-radius: 5px;`: Rounds the button corners for a softer appearance.
+* `cursor: pointer;`: Changes the cursor to a pointer when hovering over the button
+
+**Hover Effect for Buttons**
+```
+.btn:hover {
+   color: #f4f4f4;
+   background: #446190;
+}
+```
+* `btn:hover`: Targets buttons when the user hovers over them.
+* `color: #f4f4f4;`: Changes the text color to a lighter gray.
+* `background: #446190;`: Darkens the background slightly for a hover effect.
+
+>See full source code for this section [08-links-buttons.html](https://github.com/sidneyshafer/css-sandbox/blob/master/source-code/08-links-buttons.html)
 
 <kbd> <br> [Back to Top](#table-of-contents) <br> </kbd>
