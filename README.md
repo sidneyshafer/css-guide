@@ -63,6 +63,11 @@
     * [Positioning Properties](#positioning-properties)
     * [Summary of CSS Positioning](#summary-of-css-positioning)
 * **[Styling a Form](#styling-a-form)**
+* **[Aside - Other CSS Rules & Properties](#aside---other-css-rules--properties)**
+    * [Display None](#display-none)
+    * [Hidden Visibility](#hidden-visibility)
+    * [!important Rule](#important-rule)
+    * [Negative Values](#negative-values)
 
 ## CSS Basics
 
@@ -1176,5 +1181,47 @@ footer a {
 * Links in the footer are styled with the same teal color as the button.
 
 >See full source code for this section [12-form-styling.html](https://github.com/sidneyshafer/css-sandbox/blob/master/source-code/12-form-styling.html)
+
+<kbd> <br> [Back to Top](#table-of-contents) <br> </kbd>
+
+## Aside - Other CSS Rules & Properties
+
+### Display None
+```
+h1 {
+   display: none; 
+}
+```
+* `display: none;`: Completely removes the element from the document flow. The element won't be visible or occupy any space on the page.
+
+### Hidden Visibility
+```
+h1 {
+    visibility: hidden;
+}
+```
+* `visibility: hidden;`: Hides the content but preserves the space it occupies. This is useful for creating placeholders or temporarily hiding content without affecting the layout.
+
+### `!important` Rule
+```
+h1 {
+   color: blue !important;
+}
+```
+* The `!important` rule overrides any other conflicting styles, ensuring this rule always takes precedence.
+
+### Negative Values
+```
+.hello {
+    /* Cannot have negative numbers with padding */
+    margin-top: -30px;
+    margin-left: -30px;
+}
+```
+* Applies negative margins to the top and left of the element.
+* Negative margins pull the element closer to neighboring elements or move it outside its container.
+* **Padding cannot take negative values**, unlike margins. Padding is the space between the content and the element's border, and it always grows outward.
+
+>See full source code for this section [13-aside.html](https://github.com/sidneyshafer/css-sandbox/blob/master/src/13-aside.html)
 
 <kbd> <br> [Back to Top](#table-of-contents) <br> </kbd>
