@@ -424,7 +424,6 @@ The `border-style` property specifies the type of border. Below is a list of com
 #box-1 {
     border: 3px solid red;
 }
-
 ```
 * The `border` property is a shorthand property for the following individual border properties:
     * `border-width`
