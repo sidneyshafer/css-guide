@@ -81,7 +81,7 @@ Document styles follow a **CSS specificity hierarchy**:
 2. **Limit Internal CSS**: Useful for specific pages or testing, but not ideal for large projects.
 3. **Avoid Inline CSS**: Difficult to maintain and does not support reusability.
 
->See full source code for this section [01-basic.html](https://github.com/sidneyshafer/css-sandbox/blob/master/01-basic.html)
+>See full source code for this section [01-basic.html](https://github.com/sidneyshafer/css-sandbox/blob/master/source-code/01-basic.html)
 
 <kbd> <br> [Back to Top](#table-of-contents) <br> </kbd>
 
@@ -159,7 +159,7 @@ body {
 * **Leverage Specificity**: Combine selectors (e.g., `#welcome p`) for precise targeting without overusing inline styles.
 * **Keep Styles Organized**: Group related styles together (e.g., `#welcome` and `#about`).
 
->See full source code for this section [02-selectors.html](https://github.com/sidneyshafer/css-sandbox/blob/master/02-selectors.html)
+>See full source code for this section [02-selectors.html](https://github.com/sidneyshafer/css-sandbox/blob/master/source-code/02-selectors.html)
 
 <kbd> <br> [Back to Top](#table-of-contents) <br> </kbd>
 
@@ -244,7 +244,7 @@ body {
 * The `font-style` property defines whether text is normal, italicized, or oblique.
 * The `italic` value applies an italic style to the font, slanting it to the right.
 
->See full source code for this section [03-fonts.html](https://github.com/sidneyshafer/css-sandbox/blob/master/03-fonts.html)
+>See full source code for this section [03-fonts.html](https://github.com/sidneyshafer/css-sandbox/blob/master/source-code/03-fonts.html)
 
 <kbd> <br> [Back to Top](#table-of-contents) <br> </kbd>
 
@@ -302,7 +302,7 @@ h3 {
 * Use a consistent color format throughout a project for maintainability.
 * Consider accessibility, such as sufficient contrast for readability.
 
->See full source code for this section [04-colors.html](https://github.com/sidneyshafer/css-sandbox/blob/master/04-colors.html)
+>See full source code for this section [04-colors.html](https://github.com/sidneyshafer/css-sandbox/blob/master/source-code/04-colors.html)
 
 <kbd> <br> [Back to Top](#table-of-contents) <br> </kbd>
 
@@ -440,6 +440,6 @@ The `border-style` property specifies the type of border. Below is a list of com
 
 >Read more about borders and border properties [CSS Borders](https://www.geeksforgeeks.org/css-borders/)
 
->See full source code for this section [05-backgrounds-borders.html](https://github.com/sidneyshafer/css-sandbox/blob/master/05-backgrounds-borders.html)
+>See full source code for this section [05-backgrounds-borders.html](https://github.com/sidneyshafer/css-sandbox/blob/master/source-code/05-backgrounds-borders.html)
 
 <kbd> <br> [Back to Top](#table-of-contents) <br> </kbd>
