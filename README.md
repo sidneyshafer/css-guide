@@ -108,7 +108,7 @@ Document styles follow a **CSS specificity hierarchy**:
 2. **Limit Internal CSS**: Useful for specific pages or testing, but not ideal for large projects.
 3. **Avoid Inline CSS**: Difficult to maintain and does not support reusability.
 
->See full source code for this section [01-basic.html](https://github.com/sidneyshafer/css-sandbox/blob/master/source-code/01-basic.html)
+>See full source code for this section [01-basic.html](https://github.com/sidneyshafer/css-sandbox/blob/master/src/01-basic.html)
 
 <kbd> <br> [Back to Top](#table-of-contents) <br> </kbd>
 
@@ -186,7 +186,7 @@ body {
 * **Leverage Specificity**: Combine selectors (e.g., `#welcome p`) for precise targeting without overusing inline styles.
 * **Keep Styles Organized**: Group related styles together (e.g., `#welcome` and `#about`).
 
->See full source code for this section [02-selectors.html](https://github.com/sidneyshafer/css-sandbox/blob/master/source-code/02-selectors.html)
+>See full source code for this section [02-selectors.html](https://github.com/sidneyshafer/css-sandbox/blob/master/src/02-selectors.html)
 
 <kbd> <br> [Back to Top](#table-of-contents) <br> </kbd>
 
@@ -271,7 +271,7 @@ body {
 * The `font-style` property defines whether text is normal, italicized, or oblique.
 * The `italic` value applies an italic style to the font, slanting it to the right.
 
->See full source code for this section [03-fonts.html](https://github.com/sidneyshafer/css-sandbox/blob/master/source-code/03-fonts.html)
+>See full source code for this section [03-fonts.html](https://github.com/sidneyshafer/css-sandbox/blob/master/src/03-fonts.html)
 
 <kbd> <br> [Back to Top](#table-of-contents) <br> </kbd>
 
@@ -329,7 +329,7 @@ h3 {
 * Use a consistent color format throughout a project for maintainability.
 * Consider accessibility, such as sufficient contrast for readability.
 
->See full source code for this section [04-colors.html](https://github.com/sidneyshafer/css-sandbox/blob/master/source-code/04-colors.html)
+>See full source code for this section [04-colors.html](https://github.com/sidneyshafer/css-sandbox/blob/master/src/04-colors.html)
 
 <kbd> <br> [Back to Top](#table-of-contents) <br> </kbd>
 
@@ -467,14 +467,14 @@ The `border-style` property specifies the type of border. Below is a list of com
 
 >Read more about borders and border properties [CSS Borders](https://www.geeksforgeeks.org/css-borders/)
 
->See full source code for this section [05-backgrounds-borders.html](https://github.com/sidneyshafer/css-sandbox/blob/master/source-code/05-backgrounds-borders.html)
+>See full source code for this section [05-backgrounds-borders.html](https://github.com/sidneyshafer/css-sandbox/blob/master/src/05-backgrounds-borders.html)
 
 <kbd> <br> [Back to Top](#table-of-contents) <br> </kbd>
 
 ## CSS Box Model
 
 ## Box Model Overview
-![CSS Box Model Image](/source-code/img/box-model.png)
+![CSS Box Model Image](/src/img/box-model.png)
 
 The box model consists of four layers:
 * **Content**: The actual text or element inside the box.
@@ -616,7 +616,7 @@ The box model consists of four layers:
     * `margin: 20px;`
     * Top, bottom, right, and left margins are all 20px
 
->See full source code for this section [06-box-model.html](https://github.com/sidneyshafer/css-sandbox/blob/master/source-code/06-box-model.html)
+>See full source code for this section [06-box-model.html](https://github.com/sidneyshafer/css-sandbox/blob/master/src/06-box-model.html)
 
 <kbd> <br> [Back to Top](#table-of-contents) <br> </kbd>
 
@@ -687,7 +687,7 @@ The `text-align` property aligns text within an element.
 * `float: right;`: Positions the `#box-3` element to the right within the parent element (which in this case is `.container`).
 * `width: 30%;`: Specifies a width for `#box-3` to occupy 30% of the container's width.
 
->See full source code for this section [07-float-align.html](https://github.com/sidneyshafer/css-sandbox/blob/master/source-code/07-float-align.html)
+>See full source code for this section [07-float-align.html](https://github.com/sidneyshafer/css-sandbox/blob/master/src/07-float-align.html)
 
 <kbd> <br> [Back to Top](#table-of-contents) <br> </kbd>
 
@@ -768,7 +768,7 @@ a:visited {
 * `color: #f4f4f4;`: Changes the text color to a lighter gray.
 * `background: #446190;`: Darkens the background slightly for a hover effect.
 
->See full source code for this section [08-links-buttons.html](https://github.com/sidneyshafer/css-sandbox/blob/master/source-code/08-links-buttons.html)
+>See full source code for this section [08-links-buttons.html](https://github.com/sidneyshafer/css-sandbox/blob/master/src/08-links-buttons.html)
 
 <kbd> <br> [Back to Top](#table-of-contents) <br> </kbd>
 
@@ -907,7 +907,7 @@ a:visited {
 ```
 * `color: coral;`: Changes the text color to coral on hover.
 
->See full source code for this section [09-menus.html](https://github.com/sidneyshafer/css-sandbox/blob/master/source-code/09-menus.html)
+>See full source code for this section [09-menus.html](https://github.com/sidneyshafer/css-sandbox/blob/master/src/09-menus.html)
 
 <kbd> <br> [Back to Top](#table-of-contents) <br> </kbd>
 
@@ -960,7 +960,7 @@ img {
 | Default Behavior | Aligns with text flow | Starts on a new line | Aligns with text flow |
 | Width/Height     | Cannot be set directly| Can be set           | Can be set            |   
 
->See full source code for this section [10-inline-block.html](https://github.com/sidneyshafer/css-sandbox/blob/master/source-code/10-inline-block.html)
+>See full source code for this section [10-inline-block.html](https://github.com/sidneyshafer/css-sandbox/blob/master/src/10-inline-block.html)
 
 <kbd> <br> [Back to Top](#table-of-contents) <br> </kbd>
 
@@ -1058,6 +1058,6 @@ img {
 | Fixed      | Viewport                    | No                        | Stays fixed in viewport |
 | Sticky     | Nearest scrollable ancestor | Partially                 | Sticks at defined position |
 
->See full source code for this section [11-position.html](https://github.com/sidneyshafer/css-sandbox/blob/master/source-code/11-position.html)
+>See full source code for this section [11-position.html](https://github.com/sidneyshafer/css-sandbox/blob/master/src/11-position.html)
 
 <kbd> <br> [Back to Top](#table-of-contents) <br> </kbd>
