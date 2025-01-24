@@ -54,6 +54,14 @@
     * [CSS for Inline Elements](#css-for-inline-elements)
     * [CSS for Block Elements](#css-for-block-elements)
     * [CSS for Inline-Block Elements](#css-for-inline-block-elements)
+* **[CSS Position Properties](#css-position-properties)**
+    * [Static](#static-default)
+    * [Relative](#relative)
+    * [Absolute](#absolute)
+    * [Fixed](#fixed)
+    * [Sticky](#sticky)
+    * [Positioning Properties](#positioning-properties)
+    * [Summary of CSS Positioning](#summary-of-css-positioning)
 
 ## CSS Basics
 
@@ -953,5 +961,103 @@ img {
 | Width/Height     | Cannot be set directly| Can be set           | Can be set            |   
 
 >See full source code for this section [10-inline-block.html](https://github.com/sidneyshafer/css-sandbox/blob/master/source-code/10-inline-block.html)
+
+<kbd> <br> [Back to Top](#table-of-contents) <br> </kbd>
+
+## CSS Position Properties
+
+* The `position` CSS property sets how an element is positioned in a document. The `top`, `right`, `bottom`, and `left` properties determine the final location of positioned elements.
+
+### Static (Default)
+* All elements are positioned statically by default unless another `position` value is explicitly set.
+* Elements with `position: static;` follow the normal document flow and are not affected by positioning properties like `top`, `left`, `right`, or `bottom`.
+
+### Relative
+```
+#box-1 {
+    position: relative;
+    top: 50px;
+    left: 50px;
+    z-index: 1;
+    background: red;
+}
+```
+* `position: relative;`: Positions the element relative to its normal (static) position in the document flow.
+* `top: 50px;`: Moves the element down 50 pixels from the top of the document.
+* `left: 50px;`: Moves the element right 50 pixels from the left side of the document.
+* The space the element originally occupied in the flow remains intact.
+* `z-index: 1;`: Ensures the element appears above elements with a lower or default `z-index`.
+
+### Absolute
+```
+#box-2 {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    background: yellow;
+}
+
+#box-3 {
+    position: absolute;
+    bottom: 100px;
+    right: 100px;
+    background: green;
+}
+```
+* `position: absolute;`: Positions an element relative to the nearest positioned ancestor (an ancestor with position `relative`, `absolute`, or `fixed`). If no such ancestor exists, it positions relative to the `<html>` element.
+* In this example, `#box-2` and `#box-3` exist within a parent element (`.container`) which is positioned `relative` on the page, so their placement is calculated based on the container.
+
+### Fixed
+```
+#box-4 {
+    position: fixed;
+    background: blue;
+}
+```
+* `position: fixed;`: Removes the element from the document flow and positions it relative to the viewport.
+* The element remains fixed in place even when scrolling.
+* In this example, since no `top`, `left`, `right`, or `bottom` values are provided, the box stays at the top-left corner of the viewport.
+
+### Sticky
+```
+#box-5 {
+    position: sticky;
+    top: 0;
+    background: orange;
+    z-index: -1;
+}
+```
+* `position: sticky;`: Toggles between `relative` and `fixed` based on the scroll position.
+* Initially, it behaves as `relative`. As the user scrolls, it "sticks" to the specified top value (0px in this case) when it reaches that point in the viewport.
+* **The sticky element requires a scrollable container to function.**
+* `z-index: -1;`: Places it behind other elements.
+
+### Positioning Properties
+**`top`**
+* Specifies the distance between the top edge of the element and the top edge of its containing block.
+* Positive values push the element down, and negative values pull it up.
+
+**`left`**
+* Specifies the distance between the left edge of the element and the left edge of its containing block.
+* Positive values push the element right, and negative values pull it left.
+
+**`right`**
+* Specifies the distance between the right edge of the element and the right edge of its containing block.
+* Positive values pull the element left, and negative values push it right.
+
+**`bottom`**
+* Specifies the distance between the bottom edge of the element and the bottom edge of its containing block.
+* Positive values pull the element up, and negative values push it down.
+
+### Summary of CSS Positioning
+| Property   | Relative To                 | Remains in Document Flow? | Scroll Behavior      |
+| ---------- | --------------------------- | ------------------------- | -------------------- |
+| Static     | Default positioning         | Yes                       | Moves with scrolling |
+| Relative   | Itself                      | Yes                       | Moves with scrolling |
+| Absolute   | Nearest positioned ancestor | No                        | Moves with scrolling |
+| Fixed      | Viewport                    | No                        | Stays fixed in viewport |
+| Sticky     | Nearest scrollable ancestor | Partially                 | Sticks at defined position |
+
+>See full source code for this section [11-position.html](https://github.com/sidneyshafer/css-sandbox/blob/master/source-code/11-position.html)
 
 <kbd> <br> [Back to Top](#table-of-contents) <br> </kbd>
