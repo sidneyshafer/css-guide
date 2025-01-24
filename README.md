@@ -946,7 +946,7 @@ img {
     * Inline-block elements behave like inline elements (they appear next to each other without starting on a new line).
     * Unlike true inline elements, they allow for setting dimensions like width, height, padding, and margins.
 
-**Table of Differences**
+**Differences**
 | Property         | Inline                | Block                | Inline-Block          |
 | ---------------- | --------------------- | -------------------- | --------------------- |
 | Default Behavior | Aligns with text flow | Starts on a new line | Aligns with text flow |
