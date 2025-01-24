@@ -40,6 +40,10 @@
     * [CSS Reset](#css-reset)
     * [Padding](#padding)
     * [Margin](#margin)
+* **[Float and Align Properties](#float-and-align-properties)**
+    * [Text Alignment](#text-alignment)
+    * [Clearfix](#clearfix)
+    * [Float Layout](#float-layout)
 
 ## CSS Basics
 
@@ -595,5 +599,76 @@ The box model consists of four layers:
     * Top, bottom, right, and left margins are all 20px
 
 >See full source code for this section [06-box-model.html](https://github.com/sidneyshafer/css-sandbox/blob/master/source-code/06-box-model.html)
+
+<kbd> <br> [Back to Top](#table-of-contents) <br> </kbd>
+
+## Float and Align Properties
+
+### Text Alignment
+```
+.box p {
+    text-align: left;
+    text-align: center;
+    text-align: right;
+    text-align: justify;
+}
+```
+The `text-align` property aligns text within an element.
+
+**Text Align Values**
+| Value    | Description |
+| -------- | ----------- |
+| `left`   | Aligns text to the left (**default**) |
+| `center` | Centers text horizontally |
+| `right`  | Aligns text to the right |
+| `justify`| Distributes text evenly across the width of the element, making the lines appear neat and straight |
+
+### Clearfix
+```
+.clr {
+   clear: both;
+}
+
+...
+
+<div class="container">
+      <div id="box-1" class="box">
+         ...
+      </div>
+      <div id="box-2" class="box">
+        ...
+      </div>
+      <div id="box-3" class="box">
+        ...
+      </div>
+      <div class="clr"></div>
+      <div id="box-4" class="box">
+        ...
+      </div>
+</div>
+```
+* Ensures that elements following floated elements start below them, not next to them.
+* In this example, it is used to clear the float after `#box-2` and `#box-3`, allowing `#box-4` to appear on a new line.
+
+### Float Layout
+```
+#box-2 {
+   float: left;
+   width: 68%;
+}
+```
+* `float: left;`: Positions the `#box-2` element to the left within the parent element (which in this case is `.container`).
+* `width: 68%;`: Specifies a width for `#box-2` to occupy 68% of the container's width.
+
+```
+#box-3 {
+   float: right;
+   width: 30%;
+}
+```
+* `float: right;`: Positions the `#box-3` element to the right within the parent element (which in this case is `.container`).
+* `width: 30%;`: Specifies a width for `#box-3` to occupy 30% of the container's width.
+
+>See full source code for this section [07-float-align.html](https://github.com/sidneyshafer/css-sandbox/blob/master/source-code/07-float-align.html)
 
 <kbd> <br> [Back to Top](#table-of-contents) <br> </kbd>
