@@ -452,7 +452,7 @@ The `border-style` property specifies the type of border. Below is a list of com
 ## CSS Box Model
 
 ## Box Model Overview
-![CSS Box Model Image](img/box-model.png)
+![CSS Box Model Image](/source-code/img/box-model.png)
 
 The box model consists of four layers:
 * **Content**: The actual text or element inside the box.
