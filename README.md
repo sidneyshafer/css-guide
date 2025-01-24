@@ -35,6 +35,11 @@
     * [Individual Border Sides](#individual-border-sides)
     * [Common Border Styles](#common-border-styles)
     * [Using Border Shorthand Property](#using-border-shorthand-property)
+* **[CSS Box Model](#css-box-model)**
+    * [Box Model Overview](#box-model-overview)
+    * [CSS Reset](#css-reset)
+    * [Padding](#padding)
+    * [Margin](#margin)
 
 ## CSS Basics
 
@@ -441,5 +446,154 @@ The `border-style` property specifies the type of border. Below is a list of com
 >Read more about borders and border properties [CSS Borders](https://www.geeksforgeeks.org/css-borders/)
 
 >See full source code for this section [05-backgrounds-borders.html](https://github.com/sidneyshafer/css-sandbox/blob/master/source-code/05-backgrounds-borders.html)
+
+<kbd> <br> [Back to Top](#table-of-contents) <br> </kbd>
+
+## CSS Box Model
+
+## Box Model Overview
+![CSS Box Model Image](img/box-model.png)
+
+The box model consists of four layers:
+* **Content**: The actual text or element inside the box.
+* **Padding**: Space between the content and the border.
+* **Border**: Surrounds the padding; it adds a defined boundary to the element.
+* **Margin**: Space outside the border to separate the element from others.
+
+### CSS Reset
+```
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+```
+* **Universal Selector (`*`)**: Applies style rules to all elements in a document.
+* `margin: 0;` and `padding: 0;`: Removes default browser margins and padding.
+* `box-sizing: border-box;`: Ensures the width and height of elements include the padding and border but exclude the margin.
+
+### Padding
+```
+.box {
+    /* Padding on all sides */
+    padding: 20px;
+
+    /* Padding per side */
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+
+    /* Padding shorthand = top, right, bottom, left */
+    padding: 10px 20px 10px 20px;
+
+    /* Padding shorthand = top/bottom left/right */
+    padding: 10px 20px;
+}
+```
+* **Padding is the space between the content and the element's border.**
+* Specifying the padding for each side of an element:
+    * `padding-top`
+    * `padding-right`
+    * `padding-bottom`
+    * `padding-left`
+
+**Padding Shorthand Property**
+* The `padding` property is a shorthand property for the following patterns:
+    * `padding-top`
+    * `padding-right`
+    * `padding-bottom`
+    * `padding-left`
+
+**Padding Property Values**
+* `length` - specifies a padding in `px`, `pt`, `cm`, `em`, `rem`, etc.
+* `%` - specifies a padding in % of the width of the containing element
+* `inherit` - specifies that the padding should be inherited from the parent element
+
+* Example with **four** values:
+    * `padding: 10px 20px 10px 20px;`
+    * Top padding are 10px
+    * Right padding are 20px
+    * Bottom padding are 10px
+    * Left padding are 20px
+
+* Example with **three** values:
+    * `padding: 10px 20px 30px;`
+    * Top padding are 10px
+    * Right **and** left paddings are 20px
+    * Bottom padding are 30px
+
+* Example with **two** values:
+    * `padding: 10px 20px;`
+    * Top **and** bottom paddings are 10px
+    * Right **and** left paddings are 20px
+
+* Example with **one** value:
+    * `padding: 20px;`
+    * Top, bottom, right, and left paddings are all 20px
+
+### Margin
+```
+.box {
+    /* Margin on all sides */
+    margin: 20px;
+    
+    /* Margin per side */
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+
+    /* Margin shorthand = top, right, bottom, left */
+    margin: 10px 20px 10px 20px;
+
+    /* Margin shorthand = top/bottom left/right */
+    margin: 10px 20px;
+}
+```
+* **Margin is the space outside the border, separating the element from adjacent elements.**
+* Margin properties function similar to padding.
+* Specifying the margin for each side of an element:
+    * `margin-top`
+    * `margin-right`
+    * `margin-bottom`
+    * `margin-left`
+
+**Margin Property Values**
+* `auto` - the browser calculates the margin
+* `length` - specifies a margin in `px`, `pt`, `cm`, `em`, `rem`, etc.
+* `%` - specifies a margin in % of the width of the containing element
+* `inherit` - specifies that the margin should be inherited from the parent element
+
+**Margin Shorthand Property**
+* The `margin` property is a shorthand property for the following patterns:
+    * `margin-top`
+    * `margin-right`
+    * `margin-bottom`
+    * `margin-left`
+
+* Example with **four** values:
+    * `margin: 10px 20px 10px 20px;`
+    * Top margin are 10px
+    * Right margin are 20px
+    * Bottom margin are 10px
+    * Left margin are 20px
+
+* Example with **three** values:
+    * `margin: 10px 20px 30px;`
+    * Top margin are 10px
+    * Right **and** left margins are 20px
+    * Bottom margin are 30px
+
+* Example with **two** values:
+    * `margin: 10px 20px;`
+    * Top **and** bottom margins are 10px
+    * Right **and** left margins are 20px
+
+* Example with **one** value:
+    * `margin: 20px;`
+    * Top, bottom, right, and left margins are all 20px
+
+>See full source code for this section [06-box-model.html](https://github.com/sidneyshafer/css-sandbox/blob/master/source-code/06-box-model.html)
 
 <kbd> <br> [Back to Top](#table-of-contents) <br> </kbd>
