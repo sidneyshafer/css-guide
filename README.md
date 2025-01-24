@@ -47,6 +47,9 @@
 * **[Styling Links and Buttons](#styling-links-and-buttons)**
     * [Styling Links](#styling-links-a)
     * [Styling Buttons](#styling-buttons)
+* **[CSS Menus](#css-menus)**
+    * [Styling a Simple Navbar](#styling-a-simple-navbar)
+    * [Styling a Simple Side Menu](#styling-a-simple-side-menu)
 
 ## CSS Basics
 
@@ -754,5 +757,144 @@ a:visited {
 * `background: #446190;`: Darkens the background slightly for a hover effect.
 
 >See full source code for this section [08-links-buttons.html](https://github.com/sidneyshafer/css-sandbox/blob/master/source-code/08-links-buttons.html)
+
+<kbd> <br> [Back to Top](#table-of-contents) <br> </kbd>
+
+## CSS Menus
+
+### Styling a Simple Navbar
+
+**HTML Code**
+```
+<ul class="navbar">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Contact</a></li>
+</ul>
+```
+
+**CSS Styles**
+
+>**NavBar Structure**
+```
+.navbar {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: #4c6ca0;
+    border-radius: 5px;
+    overflow: auto;
+}
+```
+* `list-style: none;`: Removes default list markers (bullets).
+* `margin: 0;` and `padding: 0;`: Removes default spacing around the `<ul>` element.
+* `background: #4c6ca0;`: Sets a dark blue background.
+* `border-radius: 5px;`: Rounds the corners of the navbar.
+* `overflow: auto;`: Ensures the navbar clears its floated child elements.
+
+>**Navbar List Items**
+```
+.navbar li {
+   float: left;
+}
+```
+* `float: left;`: Aligns each list item (`<li>`) horizontally.
+
+>**Navbar Links**
+```
+.navbar li a {
+   display: block;
+   color: #fff;
+   text-decoration: none;
+   padding: 15px 20px;
+}
+```
+* `display: block;`: Links will fill the entire area of the list item.
+* `color: #fff;`: Sets the text color to white.
+* `text-decoration: none;`: Removes the default underline from links.
+* `padding: 15px 20px;`: Adds spacing around the text content.
+
+>**Hover Effect**
+```
+.navbar li a:hover {
+   background-color: #446190;
+   color: #f4f4f4;
+}
+```
+* `.navbar li a:hover`: Targets navbar links when a user hovers over them.
+* `background-color: #446190;`: Changes the background color of the link on hover.
+* `color: #f4f4f4;`: Changes the text color on hover.
+
+### Styling a Simple Side Menu
+
+**HTML Code**
+```
+<ul class="side-menu">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Contact</a></li>
+</ul>
+```
+
+**CSS Styles**
+
+>**Side Menu Structure**
+```
+.side-menu {
+    list-style: none;
+    border: 1px #ddd solid;
+    border-radius: 10px;
+    width: 300px;
+    padding: 20px;
+}
+```
+* `list-style: none;`: Removes default list markers (bullets).
+* `border: 1px #ddd solid;`: Adds a light gray solid border around the side menu.
+* `border-radius: 10px;`: Rounds the corners of the side menu.
+* `width: 300px;`: Sets the fixed width of the menu to 300 pixels.
+* `padding: 20px;`: Adds internal spacing around the content of the side menu.
+
+>**Side Menu List Items**
+```
+.side-menu li {
+    font-size: 18px;
+    line-height: 2.4em;
+    border-bottom: dotted 1px #ddd;
+}
+```
+* `font-size: 18px;`: Sets the font size to `18px` for all `<li>` elements within the `.side-menu`.
+* `line-height: 2.4em;`: Adds vertical spacing between the list items.
+* `border-bottom: dotted 1px #ddd`;: Adds a dotted gray line below each list item.
+
+>**Last List Item**
+```
+.side-menu li:last-child {
+   border: none;
+}
+```
+* `:last-child`: Targets the last item in a list.
+* `border: none;`: Removes the bottom border for the last list item.
+
+>**Side Menu Links**
+```
+.side-menu li a {
+    color: #333;
+    text-decoration: none;
+}
+```
+* `color: #333;`: Sets the text color.
+* `text-decoration: none;`: Removes the default underline from links.
+
+>**Hover Effect**
+```
+.side-menu li a:hover {
+   color: coral;
+}
+```
+* `color: coral;`: Changes the text color to coral on hover.
+
+>See full source code for this section [09-menus.html](https://github.com/sidneyshafer/css-sandbox/blob/master/source-code/09-menus.html)
 
 <kbd> <br> [Back to Top](#table-of-contents) <br> </kbd>
