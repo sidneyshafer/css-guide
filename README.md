@@ -50,6 +50,10 @@
 * **[CSS Menus](#css-menus)**
     * [Styling a Simple Navbar](#styling-a-simple-navbar)
     * [Styling a Simple Side Menu](#styling-a-simple-side-menu)
+* **[Inline and Block Styling](#inline-and-block-styling)**
+    * [CSS for Inline Elements](#css-for-inline-elements)
+    * [CSS for Block Elements](#css-for-block-elements)
+    * [CSS for Inline-Block Elements](#css-for-inline-block-elements)
 
 ## CSS Basics
 
@@ -896,5 +900,58 @@ a:visited {
 * `color: coral;`: Changes the text color to coral on hover.
 
 >See full source code for this section [09-menus.html](https://github.com/sidneyshafer/css-sandbox/blob/master/source-code/09-menus.html)
+
+<kbd> <br> [Back to Top](#table-of-contents) <br> </kbd>
+
+## Inline and Block Styling
+
+### CSS for Inline Elements
+
+```
+li {
+    display: inline;  
+}
+```
+* The `<li>` elements (list items) are styled to have a `display: inline;`.
+* **Behavior of Inline Elements**:
+    * Inline elements flow with the surrounding text and do not start on a new line.
+    * Only the element content is affected by their dimensions. 
+    * Width and height cannot be set directly.
+* In this case, the `<li>` elements will appear next to each other horizontally within the `<ul>` container.
+
+### CSS for Block Elements
+```
+img {
+    display: block;
+    margin: auto;
+}
+```
+* The `<img>` element is styled as a block-level element.
+* `display: block;`: Forces the image to act as a block element.
+* `margin: auto;`: Centers the image horizontally within its container.
+* **Behavior of Block Elements**:
+    * Block elements start on a new line and stretch to occupy the full width of their container.
+    * You can control their width, height, margins, and padding.
+
+### CSS for Inline-Block Elements
+```
+.box {
+    ...
+    display: inline-block;
+    ...
+}
+```
+* `display: inline-block;`: Makes the boxes align horizontally (like inline elements) but still allows block-level box styling.
+* **Behavior of Inline-Block Elements**:
+    * Inline-block elements behave like inline elements (they appear next to each other without starting on a new line).
+    * Unlike true inline elements, they allow for setting dimensions like width, height, padding, and margins.
+
+**Table of Differences**
+| Property         | Inline                | Block                | Inline-Block          |
+| ---------------- | --------------------- | -------------------- | --------------------- |
+| Default Behavior | Aligns with text flow | Starts on a new line | Aligns with text flow |
+| Width/Height     | Cannot be set directly| Can be set           | Can be set            |   
+
+>See full source code for this section [10-inline-block.html](https://github.com/sidneyshafer/css-sandbox/blob/master/source-code/10-inline-block.html)
 
 <kbd> <br> [Back to Top](#table-of-contents) <br> </kbd>
