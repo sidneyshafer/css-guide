@@ -1,6 +1,6 @@
 # CSS Sandbox Part 1
 
->CSS snippets, examples, and code breakdown for learning the basics of CSS.
+>Snippets, examples, and code breakdowns for learning the basics of CSS..
 
 ## Table of Contents
 
