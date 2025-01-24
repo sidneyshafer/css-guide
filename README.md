@@ -28,6 +28,13 @@
     * [The Color Property](#the-color-property)
     * [Color Definitions in the CSS](#color-definitions-in-the-css)
     * [Colors Best Practices](#color-best-practices)
+* **[Backgrounds and Borders](#backgrounds-and-borders)**
+    * [Background Properties](#background-properties)
+    * [Using Background Shorthand Property](#using-background-shorthand-property)
+    * [Border Properties](#border-properties)
+    * [Individual Border Sides](#individual-border-sides)
+    * [Common Border Styles](#common-border-styles)
+    * [Using Border Shorthand Property](#using-border-shorthand-property)
 
 ## CSS Basics
 
@@ -296,5 +303,144 @@ h3 {
 * Consider accessibility, such as sufficient contrast for readability.
 
 >See full source code for this section [04-colors.html](https://github.com/sidneyshafer/css-sandbox/blob/master/04-colors.html)
+
+<kbd> <br> [Back to Top](#table-of-contents) <br> </kbd>
+
+## Backgrounds and Borders
+
+### Background Properties
+| Property           | Description |
+| ------------------ | ----------- |
+| `background-color` | Specifies the background color to be used |
+| `background-image` | Specifies one or more background images to be used |
+| `background-position` | Specifies the position of the background images |
+| `background-size` | Specifies the size of the background images |
+| `background-repeat` | Specifies how to repeat the background images |
+| `background-origin` | Specifies the positioning area of the background images |
+| `background-clip` | Specifies the painting area of the background images |
+| `background-attachment` | Specifies whether the background images are fixed or scrolls with the rest of the page |
+
+```
+#box-1 {
+   background-color: #ccc;
+}
+```
+* Sets the background color to a light gray using the color code `#ccc`.
+
+## Using Background Shorthand Property
+
+**Example 1**
+```
+#box-2 {
+   background: #333;
+}
+```
+* When using the shorthand property, the order of the property values are:
+    1. `background-color`
+    2. `background-image`
+    3. `background-repeat`
+    4. `background-attachment`
+    5. `background-position`
+
+* Does not matter if one of the property values is missing, as long as the other ones are in this order.
+
+**Example 2**
+```
+#box-3 {
+   background: url('./img/stars.jpg') no-repeat center center/cover;
+}
+```
+* Sets the background to an image located at `./img/stars.jpg`.
+* `no-repeat`: prevents the image from repeating.
+* `center center`: centers the image both horizontally and vertically.
+* `cover`: ensures the image covers the entire area of the box while maintaining its aspect ratio.
+
+**Example 3**
+```
+#box-4 {
+    background: url('./img/leaf.png') no-repeat center center;
+    background-attachment: fixed;
+}
+```
+* Sets the background to an image located at `./img/leaf.png`.
+* `no-repeat`: prevents the image from repeating.
+* `center center`: centers the image both horizontally and vertically.
+* `background-attachment: fixed;`
+    * Fixes the background image so that it does not scroll with the rest of the page. 
+    * The image remains static while the content scrolls.
+
+## Border Properties
+| Property           | Description |
+| ------------------ | ----------- |
+| `border-style`     | Determines the type of border |
+| `border-width`     | Sets the width of the border |
+| `border-color`     | Specifies the border color |
+| `border-radius`    | Creates rounded corners for elements |
+
+## Individual Border Sides
+* CSS allows you to style each side of a border individually, giving flexibility in design (top, right, bottom, and left):
+    * `border-top-[type]`
+    * `border-right-[type]`
+    * `border-bottom-[type]`
+    * `border-left-[type]`
+
+* `[type]` is optional and can be any border property type, including: `style`, `width`, `color`, or `radius`.
+
+**Example**
+```
+#box-2 {
+    border-top: blue solid 5px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+```
+* `border-top: blue solid 5px;`
+    * Sets the top border to a color of `blue`, a border style of `solid`, and a border width of `5px`.
+* `border-top-left-radius: 10px;`
+    * Defines a border radius of `10px` at the top left corner.
+* `border-top-right-radius: 10px;`
+    * Defines a border radius of `10px` at the top right corner.
+
+## Common Border Styles
+The `border-style` property specifies the type of border. Below is a list of common border style types.
+
+| Border Style | Description |
+| ------------ | ----------- |
+| `dotted`     | Defines a dotted border |
+| `dashed`     | Defines a dashed border |
+| `solid`      | Defines a solid border  |
+| `double`     | Defines a double border |
+| `groove`     | Defines a 3D grooved border. The effect depends on the `border-color` value |
+| `ridge`      | Defines a 3D ridged border. The effect depends on the `border-color` value |
+| `inset`      | Defines a 3D inset border. The effect depends on the `border-color` value |
+| `outset`     | Defines a 3D outset border. The effect depends on the `border-color` value |
+| `none`       | Defines no border |
+| `hidden`     | Defines a hidden border |
+
+>Read more about border styles and code examples [CSS Border Style](https://www.w3schools.com/css/css_border.asp)
+
+## Using Border Shorthand Property
+```
+#box-1 {
+    border: 3px solid red;
+}
+
+```
+* The `border` property is a shorthand property for the following individual border properties:
+    * `border-width`
+    * `border-style`
+    * `border-color`
+* In this example, border width is set to `3px`, border style is set to `solid`, and border color is set to `red`.
+* Border shorthand can be using in conjunction with border sides:
+    * `border-top`
+    * `border-right`
+    * `border-bottom`
+    * `border-left`
+
+    * Example: `border-top: blue solid 5px;`
+
+>Read more about borders and border properties [CSS Borders](https://www.geeksforgeeks.org/css-borders/)
+
+>See full source code for this section [05-backgrounds-borders.html](https://github.com/sidneyshafer/css-sandbox/blob/master/05-backgrounds-borders.html)
 
 <kbd> <br> [Back to Top](#table-of-contents) <br> </kbd>
