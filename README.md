@@ -431,7 +431,7 @@ The `border-style` property specifies the type of border. Below is a list of com
     * `border-style`
     * `border-color`
 * In this example, border width is set to `3px`, border style is set to `solid`, and border color is set to `red`.
-* Border shorthand can be using in conjunction with border sides:
+* Border shorthand can also be used in conjunction with more precise border sides:
     * `border-top`
     * `border-right`
     * `border-bottom`
