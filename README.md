@@ -1059,6 +1059,8 @@ img {
 | Fixed      | Viewport                    | No                        | Stays fixed in viewport |
 | Sticky     | Nearest scrollable ancestor | Partially                 | Sticks at defined position |
 
+>**See more examples of CSS positioning in [20-position-ex.html](https://github.com/sidneyshafer/css-sandbox/blob/master/src/20-position-ex.html)**
+
 >See full source code for this section [11-position.html](https://github.com/sidneyshafer/css-sandbox/blob/master/src/11-position.html)
 
 <kbd> <br> [Back to Top](#table-of-contents) <br> </kbd>
