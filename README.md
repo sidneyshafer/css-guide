@@ -1577,6 +1577,8 @@ justify-content: center;
 * `.item-1` has `align-self: flex-start;`, so it aligns at the top of the container, ignoring `align-items: center`.
 * `.item-3` has `align-self: flex-end;`, so it aligns at the bottom of the container.
 
+>**See another example for implementing CSS Flexbox in [19-flexbox-example.html](https://github.com/sidneyshafer/css-sandbox/blob/master/src/19-flexbox-example.html)**
+
 >See full source code for this section [18-flex-align.html](https://github.com/sidneyshafer/css-sandbox/blob/master/src/18-flex-align.html)
 
 <kbd> <br> [Back to Top](#table-of-contents) <br> </kbd>
