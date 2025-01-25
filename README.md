@@ -82,6 +82,14 @@
     * [Overview](#overview-of-vh-and-vw-units)
     * [Example](#example-using-vh-and-vw)
     * [Best Practices](#best-practices-using-vh-and-vw)
+* **[CSS Flexbox Basics](#css-flexbox-basics)**
+    * [The Flex Container](#display-flex---the-flex-container)
+        * [flex-direction](#flex-direction)
+        * [flex-wrap](#flex-wrap)
+    * [The Flex Items](#flex---the-flex-items)
+        * [flex-grow](#flex-grow)
+        * [flex-shrink](#flex-shrink)
+        * [flex-basis](#flex-basis)
 
 ## CSS Basics
 
@@ -1438,5 +1446,60 @@ header {
 * Combine media queries with `vh` and `vw` for fully responsive designs.
 
 >See full source code for this section [16-vh-vw.html](https://github.com/sidneyshafer/css-sandbox/blob/master/src/16-vh-vw.html)
+
+<kbd> <br> [Back to Top](#table-of-contents) <br> </kbd>
+
+## CSS Flexbox Basics
+
+### `display: flex;` - The Flex Container
+```
+.flex-container {
+    display: flex;
+    /* flex-direction: row; */
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column; */
+    /* flex-direction: column-reverse; */
+    /* flex-wrap: wrap; */
+}
+```
+* Turns the container into a flex container.
+* All child elements become flex items, which can be laid out along the main axis or the cross axis.
+
+#### `flex-direction`
+* Specifies the direction of the main axis (how items are arranged).
+* **Possible values include**:
+    * `row` (default): Items are placed in a row (horizontally).
+    * `row-reverse`: Items are placed in a row but in reverse order.
+    * `column`: Items are stacked vertically.
+    * `column-reverse`: Items are stacked vertically in reverse order.
+
+#### `flex-wrap`
+* Controls whether items wrap to the next line if they overflow the container.
+* **Possible values include**:
+    * `nowrap` (default): Items stay on a single line.
+    * `wrap`: Items wrap onto new lines if needed.
+    * `wrap-reverse`: Items wrap onto new lines in reverse order.
+
+### `flex` - The Flex Items
+```
+.item {
+   flex: 1 0 200px;
+}
+```
+* The `flex` property is shorthand for: `flex-grow flex-shrink flex-basis;`.
+
+#### `flex-grow`
+* Determines how much a flex item can grow relative to the others when there is extra space in the container.
+* In this example, all items can grow equally because they have the same `flex-grow` value.
+
+#### `flex-shrink`
+* Determines how much a flex item can shrink relative to the others when there is not enough space.
+* Here, `0` means the item will not shrink below its `flex-basis`.
+
+#### `flex-basis`
+* Specifies the initial size of the item before growing or shrinking.
+* Here, each item starts with a base width of `200px`.
+
+>See full source code for this section [17-flex-basics.html](https://github.com/sidneyshafer/css-sandbox/blob/master/src/17-flex-basics.html)
 
 <kbd> <br> [Back to Top](#table-of-contents) <br> </kbd>
