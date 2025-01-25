@@ -1321,7 +1321,7 @@ Media queries allow conditional application of CSS rules based on device propert
 ```
 <link rel="stylesheet" media="screen and (min-width: 501px) and (max-width: 768px)" href="css/mobile.css">
 ```
-* An external stylesheet (`mobile.css`) is conditionally applied for screens **between 501px and 768px**(Tablet Screens). 
+* An external stylesheet (`mobile.css`) is conditionally applied for screens **between 501px and 768px** (Tablet Screens). 
 * This can be useful for separating specific styles into a different file.
 
 >See full source code for this section [14-media-queries.html](https://github.com/sidneyshafer/css-sandbox/blob/master/src/14-media-queries.html)
