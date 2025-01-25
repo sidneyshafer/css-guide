@@ -110,7 +110,7 @@
 * Any CSS rules in `css/style.css` are applied to this document.
 
 ### Internal CSS
-```
+```css
 <style>
     h2 {
         color: green;
@@ -151,7 +151,7 @@ Document styles follow a **CSS specificity hierarchy**:
 >CSS selectors are used to apply styles to specific elements based on their type, class, ID, or hierarchy.
 
 ### Element Selector
-```
+```css
 body {
     background-color: #333;
 }
@@ -162,7 +162,7 @@ body {
 
 
 ### Class Selector
-```
+```css
 .primary-heading {
     color: green;
 }
@@ -175,7 +175,7 @@ body {
 * Classes are reusable and can be applied to multiple elements.
 
 ### ID Selector
-```
+```css
 #welcome {
    background-color: #f4f4f4;
 }
@@ -188,7 +188,7 @@ body {
 * IDs are unique and are used to style a single element. They should not be used on multiple elements in a document.
 
 ### Multiple Selectors
-```
+```css
 #welcome, #about {
     border: 1px solid #ccc;
     padding: 10px;
@@ -199,7 +199,7 @@ body {
 * Multiple selectors allow applying the same styles to several elements, separated by commas.
 
 ### Nested Selector
-```
+```html
 #welcome p {
     font-size: 20px;
 }
@@ -227,7 +227,7 @@ body {
 ## Fonts
 
 ### `font-family`
-```
+```css
 body {
     font-family: 'Roboto', sans-serif;
 }
@@ -238,7 +238,7 @@ body {
 
 ### Google Fonts
 
-```
+```html
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 ```
 * Statement importing a font from the Google Fonts library using the `<link>` tag in the HTML document.
@@ -247,7 +247,7 @@ body {
 >See more about using **[Google Fonts](https://fonts.google.com/)**
 
 ### `font-size`
-```
+```css
 body {
    font-size: 18px;
 }
@@ -256,7 +256,7 @@ body {
 * In this example, font size is set to `18px` for the entire document, meaning all text inherits this size unless overridden by more specific rules.
 
 ### `line-height`
-```
+```css
 body {
    line-height: 1.6em;
 }
@@ -266,7 +266,7 @@ body {
 * In this example, the value `1.6em` means the line height is 1.6 times the font size (`18px × 1.6 = 28.8px`).
 
 ### `font-weight`
-```
+```css
 #welcome p span {
    font-weight: bold;
 }
@@ -297,7 +297,7 @@ body {
 | `900`     | Black |
 
 ### `font-style`
-```
+```css
 #about p span {
    font-style: italic;
 }
@@ -321,7 +321,7 @@ body {
 ### Color Definitions in the CSS
 
 **Color Name**
-```
+```css
 h1 {
    color: red;
 }
@@ -331,7 +331,7 @@ h1 {
 * While convenient, they are limited in number and often not specific enough for detailed designs.
 
 **RGB Color**
-```
+```css
 h2 {
    color: rgb(255, 255, 120);
 }
@@ -345,7 +345,7 @@ h2 {
     * Blue: Medium intensity (120).
 
 **Hexadecimal Color**
-```
+```css
 h3 {
    color: #088faf;
 }
@@ -381,7 +381,7 @@ h3 {
 | `background-clip` | Specifies the painting area of the background images |
 | `background-attachment` | Specifies whether the background images are fixed or scrolls with the rest of the page |
 
-```
+```css
 #box-1 {
    background-color: #ccc;
 }
@@ -391,7 +391,7 @@ h3 {
 ## Using Background Shorthand Property
 
 **Example 1**
-```
+```css
 #box-2 {
    background: #333;
 }
@@ -406,7 +406,7 @@ h3 {
 * Does not matter if one of the property values is missing, as long as the other ones are in this order.
 
 **Example 2**
-```
+```css
 #box-3 {
    background: url('./img/stars.jpg') no-repeat center center/cover;
 }
@@ -417,7 +417,7 @@ h3 {
 * `cover`: ensures the image covers the entire area of the box while maintaining its aspect ratio.
 
 **Example 3**
-```
+```css
 #box-4 {
     background: url('./img/leaf.png') no-repeat center center;
     background-attachment: fixed;
@@ -448,7 +448,7 @@ h3 {
 * `[type]` is optional and can be any border property type, including: `style`, `width`, `color`, or `radius`.
 
 **Example**
-```
+```css
 #box-2 {
     border-top: blue solid 5px;
     border-top-left-radius: 10px;
@@ -481,7 +481,7 @@ The `border-style` property specifies the type of border. Below is a list of com
 >Read more about border styles and code examples [CSS Border Style](https://www.w3schools.com/css/css_border.asp)
 
 ## Using Border Shorthand Property
-```
+```css
 #box-1 {
     border: 3px solid red;
 }
@@ -517,7 +517,7 @@ The box model consists of four layers:
 * **Margin**: Space outside the border to separate the element from others.
 
 ### CSS Reset
-```
+```css
 * {
     margin: 0;
     padding: 0;
@@ -529,7 +529,7 @@ The box model consists of four layers:
 * `box-sizing: border-box;`: Ensures the width and height of elements include the padding and border but exclude the margin.
 
 ### Padding
-```
+```css
 .box {
     /* Padding on all sides */
     padding: 20px;
@@ -589,7 +589,7 @@ The box model consists of four layers:
     * Top, bottom, right, and left paddings are all 20px
 
 ### Margin
-```
+```css
 .box {
     /* Margin on all sides */
     margin: 20px;
@@ -657,7 +657,7 @@ The box model consists of four layers:
 ## Float and Align Properties
 
 ### Text Alignment
-```
+```css
 .box p {
     text-align: left;
     text-align: center;
@@ -676,7 +676,7 @@ The `text-align` property aligns text within an element.
 | `justify`| Distributes text evenly across the width of the element, making the lines appear neat and straight |
 
 ### Clearfix
-```
+```html
 .clr {
    clear: both;
 }
@@ -703,7 +703,7 @@ The `text-align` property aligns text within an element.
 * In this example, it is used to clear the float after `#box-2` and `#box-3`, allowing `#box-4` to appear on a new line.
 
 ### Float Layout
-```
+```css
 #box-2 {
    float: left;
    width: 68%;
@@ -712,7 +712,7 @@ The `text-align` property aligns text within an element.
 * `float: left;`: Positions the `#box-2` element to the left within the parent element (which in this case is `.container`).
 * `width: 68%;`: Specifies a width for `#box-2` to occupy 68% of the container's width.
 
-```
+```css
 #box-3 {
    float: right;
    width: 30%;
@@ -728,7 +728,7 @@ The `text-align` property aligns text within an element.
 ## Styling Links and Buttons
 
 ### Styling Links (`<a>`)
-```
+```css
 a {
     color: #333;
     text-decoration: none;
@@ -738,7 +738,7 @@ a {
 * `text-decoration: none;`: Removes the default underline styling of links.
 
 **Hover Effect**
-```
+```css
 a:hover {
    color: coral;
    text-decoration: underline;
@@ -749,7 +749,7 @@ a:hover {
 * `text-decoration: underline;`: Changes the underline style to 'underline' on hover.
 
 **Active State**
-```
+```css
 a:active {
    color: red;
 }
@@ -758,7 +758,7 @@ a:active {
 * `color: red;`: Changes the link color to red during the click action.
 
 **Visited State**
-```
+```css
 a:visited {
     color: red;
 }
@@ -769,10 +769,10 @@ a:visited {
 ### Styling Buttons
 
 **Example - Using CSS Classes**
-```
+```html
 <button class="btn">My Button</button>
 ```
-```
+```css
 .btn {
     background: #4c6ca0;
     color: #fff;
@@ -792,7 +792,7 @@ a:visited {
 * `cursor: pointer;`: Changes the cursor to a pointer when hovering over the button
 
 **Hover Effect for Buttons**
-```
+```css
 .btn:hover {
    color: #f4f4f4;
    background: #446190;
@@ -811,7 +811,7 @@ a:visited {
 ### Styling a Simple Navbar
 
 **HTML Code**
-```
+```html
 <ul class="navbar">
     <li><a href="#">Home</a></li>
     <li><a href="#">About</a></li>
@@ -823,7 +823,7 @@ a:visited {
 **CSS Styles**
 
 >**NavBar Structure**
-```
+```css
 .navbar {
     list-style: none;
     margin: 0;
@@ -840,7 +840,7 @@ a:visited {
 * `overflow: auto;`: Ensures the navbar clears its floated child elements.
 
 >**Navbar List Items**
-```
+```css
 .navbar li {
    float: left;
 }
@@ -848,7 +848,7 @@ a:visited {
 * `float: left;`: Aligns each list item (`<li>`) horizontally.
 
 >**Navbar Links**
-```
+```css
 .navbar li a {
    display: block;
    color: #fff;
@@ -862,7 +862,7 @@ a:visited {
 * `padding: 15px 20px;`: Adds spacing around the text content.
 
 >**Hover Effect**
-```
+```css
 .navbar li a:hover {
    background-color: #446190;
    color: #f4f4f4;
@@ -875,7 +875,7 @@ a:visited {
 ### Styling a Simple Side Menu
 
 **HTML Code**
-```
+```html
 <ul class="side-menu">
     <li><a href="#">Home</a></li>
     <li><a href="#">About</a></li>
@@ -887,7 +887,7 @@ a:visited {
 **CSS Styles**
 
 >**Side Menu Structure**
-```
+```css
 .side-menu {
     list-style: none;
     border: 1px #ddd solid;
@@ -903,7 +903,7 @@ a:visited {
 * `padding: 20px;`: Adds internal spacing around the content of the side menu.
 
 >**Side Menu List Items**
-```
+```css
 .side-menu li {
     font-size: 18px;
     line-height: 2.4em;
@@ -915,7 +915,7 @@ a:visited {
 * `border-bottom: dotted 1px #ddd`;: Adds a dotted gray line below each list item.
 
 >**Last List Item**
-```
+```css
 .side-menu li:last-child {
    border: none;
 }
@@ -924,7 +924,7 @@ a:visited {
 * `border: none;`: Removes the bottom border for the last list item.
 
 >**Side Menu Links**
-```
+```css
 .side-menu li a {
     color: #333;
     text-decoration: none;
@@ -934,7 +934,7 @@ a:visited {
 * `text-decoration: none;`: Removes the default underline from links.
 
 >**Hover Effect**
-```
+```css
 .side-menu li a:hover {
    color: coral;
 }
@@ -949,7 +949,7 @@ a:visited {
 
 ### CSS for Inline Elements
 
-```
+```css
 li {
     display: inline;  
 }
@@ -962,7 +962,7 @@ li {
 * In this case, the `<li>` elements will appear next to each other horizontally within the `<ul>` container.
 
 ### CSS for Block Elements
-```
+```css
 img {
     display: block;
     margin: auto;
@@ -976,11 +976,9 @@ img {
     * You can control their width, height, margins, and padding.
 
 ### CSS for Inline-Block Elements
-```
+```css
 .box {
-    ...
     display: inline-block;
-    ...
 }
 ```
 * `display: inline-block;`: Makes the boxes align horizontally (like inline elements) but still allows block-level box styling.
@@ -1007,7 +1005,7 @@ img {
 * Elements with `position: static;` follow the normal document flow and are not affected by positioning properties like `top`, `left`, `right`, or `bottom`.
 
 ### Relative
-```
+```css
 #box-1 {
     position: relative;
     top: 50px;
@@ -1023,7 +1021,7 @@ img {
 * `z-index: 1;`: Ensures the element appears above elements with a lower or default `z-index`.
 
 ### Absolute
-```
+```css
 #box-2 {
     position: absolute;
     top: 100px;
@@ -1042,7 +1040,7 @@ img {
 * In this example, `#box-2` and `#box-3` exist within a parent element (`.container`) which is positioned `relative` on the page, so their placement is calculated based on the container.
 
 ### Fixed
-```
+```css
 #box-4 {
     position: fixed;
     background: blue;
@@ -1053,7 +1051,7 @@ img {
 * In this example, since no `top`, `left`, `right`, or `bottom` values are provided, the box stays at the top-left corner of the viewport.
 
 ### Sticky
-```
+```css
 #box-5 {
     position: sticky;
     top: 0;
@@ -1103,7 +1101,7 @@ img {
 
 **Code Breakdown**
 >**Outer Container (`#container`)**
-```
+```css
 #container {
    max-width: 400px;
    margin: 30px auto;
@@ -1115,7 +1113,7 @@ img {
 * Adds padding around the content for spacing.
 
 >**Form Wrapper (`.form-wrap`)**
-```
+```css
 .form-wrap {
    background: #fff;
    padding: 15px 25px;
@@ -1124,7 +1122,7 @@ img {
 * Adds a white background and provides inner spacing with padding.
 
 >**Headings and Paragraphs**
-```
+```css
 .form-wrap h1, .form-wrap p {
     text-align: center;
 }
@@ -1138,7 +1136,7 @@ img {
 * Adds vertical space (margin) to `<h1>` elements for better spacing.
 
 >**Form Groups**
-```
+```css
 .form-wrap .form-group {
     margin-top: 15px;
     color: #333;
@@ -1153,7 +1151,7 @@ img {
 * Labels are displayed as block-level elements, ensuring they appear above the input fields.
 
 >**Input Fields**
-```
+```css
 .form-wrap .form-group input {
     width: 100%;
     padding: 10px;
@@ -1164,7 +1162,7 @@ img {
 * Input fields span the full width of their container (`width: 100%`).
 
 >**Submit Button**
-```
+```css
 .form-wrap button {
     display: block;
     color: #fff;
@@ -1186,7 +1184,7 @@ img {
 * Background color is a vibrant teal (`#49c1a2`), changing to a darker shade on `hover` (`#37a08e`).
 
 >**Bottom Text**
-```
+```css
 .form-wrap .bottom-text {
    font-size: 13px;
    margin-top: 20px;
@@ -1195,7 +1193,7 @@ img {
 * Defines font size and margin top styles to a text below the form.
 
 >**Footer**
-```
+```css
 footer {
    color: #fff;
    text-align: center;
@@ -1215,7 +1213,7 @@ footer a {
 ## Aside - Other CSS Rules & Properties
 
 ### Display None
-```
+```css
 h1 {
    display: none; 
 }
@@ -1223,7 +1221,7 @@ h1 {
 * `display: none;`: Completely removes the element from the document flow. The element won't be visible or occupy any space on the page.
 
 ### Hidden Visibility
-```
+```css
 h1 {
     visibility: hidden;
 }
@@ -1231,7 +1229,7 @@ h1 {
 * `visibility: hidden;`: Hides the content but preserves the space it occupies. This is useful for creating placeholders or temporarily hiding content without affecting the layout.
 
 ### `!important` Rule
-```
+```css
 h1 {
    color: blue !important;
 }
@@ -1239,7 +1237,7 @@ h1 {
 * The `!important` rule overrides any other conflicting styles, ensuring this rule always takes precedence.
 
 ### Negative Values
-```
+```css
 .hello {
     /* Cannot have negative numbers with padding */
     margin-top: -30px;
@@ -1259,7 +1257,7 @@ h1 {
 Media queries allow conditional application of CSS rules based on device properties, such as screen width, height, and orientation.
 
 ### Smartphones (max-width: 500px)
-```
+```css
  @media only screen and (max-width: 500px) {
     body {
         background: red;
@@ -1275,7 +1273,7 @@ Media queries allow conditional application of CSS rules based on device propert
     * The `<h1> `inside the `#smartphone` div becomes visible (`display: block;`).
 
 ### Tablets (501px to 768px)
-```
+```css
 @media(min-width: 501px) and (max-width: 768px) {
     body {
         background: blue;
@@ -1291,7 +1289,7 @@ Media queries allow conditional application of CSS rules based on device propert
     * The `<h1>` inside the `#tablet` div becomes visible.
 
 ### Laptops and Desktops - "Normal" Screen Size (769px to 1200px)
-```
+```css
 @media(min-width: 769px) and (max-width: 1200px) {
    body {
       background: green;
@@ -1307,7 +1305,7 @@ Media queries allow conditional application of CSS rules based on device propert
     * The `<h1>` inside the `#normal` div becomes visible.
 
 ###  Widescreen (min-width: 1201px)
-```
+```css
 @media(min-width: 1201px) {
    body {
       background: black;
@@ -1323,7 +1321,7 @@ Media queries allow conditional application of CSS rules based on device propert
     * The `<h1>` inside the `#widescreen` div becomes visible.
 
 ### Landscape (max-height: 500px)
-```
+```css
 @media(max-height: 500px) {
    body {
       background: orange;
@@ -1339,7 +1337,7 @@ Media queries allow conditional application of CSS rules based on device propert
     * The `<h1>` inside the `#landscape` div becomes visible.
 
 ### External Stylesheet for Conditional Styling
-```
+```html
 <link rel="stylesheet" media="screen and (min-width: 501px) and (max-width: 768px)" href="css/mobile.css">
 ```
 * An external stylesheet (`mobile.css`) is conditionally applied for screens **between 501px and 768px** (Tablet Screens). 
@@ -1366,7 +1364,7 @@ Media queries allow conditional application of CSS rules based on device propert
 ### `em` and `rem` Code Breakdown
 
 **Setting a Root Font Size**
-```
+```css
 html {
    font-size: 10px;
 }
@@ -1375,14 +1373,14 @@ html {
     * `1rem = 10px`
 
 **Box 1**
-```
+```css
 html {
    font-size: 10px;
 }
 ```
 * Sets the font size for `#box-1` to `20px`. This affects all child elements unless they override it.
 
-```
+```css
 #box-1 p {
    font-size: 1.5em;
    padding: 1em;
@@ -1391,7 +1389,7 @@ html {
 * `font-size: 1.5em`: 1.5 times the parent font size (i.e., `20px × 1.5 = 30px`). 30px is set as the font size value for all paragraph child elements of `#box-1`.
 * `padding: 1em`: Padding is equal to the computed font size of the `<p>` element, which is 30px.
 
-```
+```css
 #box-1 ul {
    font-size: 1.2em;
 }
@@ -1399,7 +1397,7 @@ html {
 * `font-size`: 1.2em: 1.2 times the parent font size (i.e., `20px × 1.2 = 24px`).
 
 **Box 2**
-```
+```css
 #box-2 h3 {
    font-size: 2.3rem;
 }
@@ -1407,7 +1405,7 @@ html {
 * `font-size: 2.3rem`: 2.3 times the root font size (which was set to `10px`).
 * `10px × 2.3 = 23px`.
 
-```
+```css
 #box-2 p {
    font-size: 1.6rem;
    line-height: 1.7rem;
@@ -1437,7 +1435,7 @@ html {
 * `100vw`: The width of the viewport.
 
 ### Example using `vh` and `vw`
-```
+```css
 header {
     height: 100vh;
     width: 100vw;
@@ -1458,7 +1456,7 @@ header {
 ## CSS Flexbox Basics
 
 ### `display: flex;` - The Flex Container
-```
+```css
 .flex-container {
     display: flex;
     /* flex-direction: row; */
@@ -1487,7 +1485,7 @@ header {
     * `wrap-reverse`: Items wrap onto new lines in reverse order.
 
 ### `flex` - The Flex Items
-```
+```css
 .item {
    flex: 1 0 200px;
 }
@@ -1527,7 +1525,7 @@ In CSS Flexbox, alignment is controlled along two axes:
 ### Flexbox Alignment Properties
 
 #### Aligning Along the Cross Axis
-```
+```css
 .flex-container {
     display: flex;
     flex-direction: row;
@@ -1545,7 +1543,7 @@ In CSS Flexbox, alignment is controlled along two axes:
 * `align-items: center;` centers all items vertically within the container's height (`50vh`).
 
 #### Aligning Along the Main Axis
-```
+```css
 justify-content: center;
 ```
 * `justify-content`: Aligns all flex items along the **main axis**.
@@ -1559,7 +1557,7 @@ justify-content: center;
 * `justify-content: center;` centers all items horizontally.
 
 #### Per-Item Cross-Axis Alignment
-```
+```css
 .item-1 {
     align-self: flex-start;
 }
