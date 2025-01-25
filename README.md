@@ -102,7 +102,7 @@
 >CSS stands for **Cascading Style Sheets**
 
 ### External CSS
-```
+```html
 <link rel="stylesheet" href="css/style.css">
 ```
 * Links to an external CSS file. In this case, it is located at `css/style.css` (in a folder named `css`).
@@ -110,7 +110,7 @@
 * Any CSS rules in `css/style.css` are applied to this document.
 
 ### Internal CSS
-```css
+```html
 <style>
     h2 {
         color: green;
