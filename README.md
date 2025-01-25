@@ -78,6 +78,10 @@
 * **[Em and Rem Units](#em-and-rem-units)**
     * [Overview](#overview-of-em-and-rem)
     * [Code Breakdown](#em-and-rem-code-breakdown)
+* **[Viewport Height and Viewport Width Units](#viewport-height-vh-and-viewport-width-vw)**
+    * [Overview](#overview-of-vh-and-vw-units)
+    * [Example](#example-using-vh-and-vw)
+    * [Best Practices](#best-practices-using-vh-and-vw)
 
 ## CSS Basics
 
@@ -1399,5 +1403,40 @@ html {
 * `line-height: 1.7rem`: Line height is `10px × 1.7 = 17px`.
 
 >See full source code for this section [15-em-rem.html](https://github.com/sidneyshafer/css-sandbox/blob/master/src/15-em-rem.html)
+
+<kbd> <br> [Back to Top](#table-of-contents) <br> </kbd>
+
+## Viewport Height (`vh`) and Viewport Width (`vw`)
+
+### Overview of `vh` and `vw` Units
+
+* Viewport height (`vh`) and viewport width (`vw`) are **relative length units** in CSS that are based on the **size of the viewport**. 
+* Viewport is the visible area of a web page in the browser window. 
+* These units are responsive, making them ideal for dynamic layouts and modern web design.
+
+**Definition:**
+* `1vh`: Equals 1% of the viewport's height.
+* `1vw`: Equals 1% of the viewport's width.
+
+**Full-Page Dimensions:**
+* `100vh`: The height of the viewport.
+* `100vw`: The width of the viewport.
+
+### Example using `vh` and `vw`
+```
+header {
+    height: 100vh;
+    width: 100vw;
+    background: #333 url('https://source.unsplash.com/daily') no-repeat center center/cover;
+}
+```
+* Ensures the header fills the entire viewport, regardless of screen size.
+
+## Best Practices Using `vh` and `vw`
+* Use `vh` and `vw` sparingly in combination with other units like `em`, `rem`, or percentages for better control.
+* Test across devices to ensure compatibility, especially on mobile browsers.
+* Combine media queries with `vh` and `vw` for fully responsive designs.
+
+>See full source code for this section [16-vh-vw.html](https://github.com/sidneyshafer/css-sandbox/blob/master/src/16-vh-vw.html)
 
 <kbd> <br> [Back to Top](#table-of-contents) <br> </kbd>
