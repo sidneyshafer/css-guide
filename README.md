@@ -68,6 +68,13 @@
     * [Hidden Visibility](#hidden-visibility)
     * [!important Rule](#important-rule)
     * [Negative Values](#negative-values)
+* **[Media Queries](#media-queries)**
+    * [Smartphones](#smartphones-max-width-500px)
+    * [Tablets](#tablets-501px-to-768px)
+    * [Laptops and Desktops](#laptops-and-desktops---normal-screen-size-769px-to-1200px)
+    * [Widescreen](#widescreen-min-width-1201px)
+    * [Landscape](#landscape-max-height-500px)
+    * [Using an External Stylesheet](#external-stylesheet-for-conditional-styling)
 
 ## CSS Basics
 
@@ -1223,5 +1230,100 @@ h1 {
 * **Padding cannot take negative values**, unlike margins. Padding is the space between the content and the element's border, and it always grows outward.
 
 >See full source code for this section [13-aside.html](https://github.com/sidneyshafer/css-sandbox/blob/master/src/13-aside.html)
+
+<kbd> <br> [Back to Top](#table-of-contents) <br> </kbd>
+
+## Media Queries
+
+Media queries allow conditional application of CSS rules based on device properties, such as screen width, height, and orientation.
+
+### Smartphones (max-width: 500px)
+```
+ @media only screen and (max-width: 500px) {
+    body {
+        background: red;
+    }
+
+    #smartphone h1 {
+        display: block;
+    }
+}
+```
+* For screens **500px wide or smaller**, typically smartphones:
+    * The body background changes to red.
+    * The `<h1> `inside the `#smartphone` div becomes visible (`display: block;`).
+
+### Tablets (501px to 768px)
+```
+@media(min-width: 501px) and (max-width: 768px) {
+    body {
+        background: blue;
+    } 
+
+    #tablet h1 {
+        display: block;
+    }
+}
+```
+* For screens between **501px and 768px**, typically tablets:
+    * The `body` background changes to blue.
+    * The `<h1>` inside the `#tablet` div becomes visible.
+
+### Laptops and Desktops - "Normal" Screen Size (769px to 1200px)
+```
+@media(min-width: 769px) and (max-width: 1200px) {
+   body {
+      background: green;
+   }
+
+   #normal h1 {
+      display: block;
+   }
+}
+```
+* For screens between **769px and 1200px**, such as laptops or desktops:
+    * The `body` background changes to green.
+    * The `<h1>` inside the `#normal` div becomes visible.
+
+###  Widescreen (min-width: 1201px)
+```
+@media(min-width: 1201px) {
+   body {
+      background: black;
+   }
+
+   #widescreen h1 {
+      display: block;
+   }
+}
+```
+* For screens **wider than 1200px**, typically widescreen monitors:
+    * The `body` background changes to black.
+    * The `<h1>` inside the `#widescreen` div becomes visible.
+
+### Landscape (max-height: 500px)
+```
+@media(max-height: 500px) {
+   body {
+      background: orange;
+   }
+
+   #landscape h1 {
+      display: block;
+   }
+}
+```
+* For screens with a **maximum height of 500px**, typically landscape orientations on small devices:
+    * The `body` background changes to orange.
+    * The `<h1>` inside the `#landscape` div becomes visible.
+
+### External Stylesheet for Conditional Styling
+```
+<link rel="stylesheet" media="screen and (min-width: 501px) and (max-width: 768px)" href="css/mobile.css">
+```
+* An external stylesheet (`mobile.css`) is conditionally applied for screens **between 501px and 768px**(Tablet Screens). 
+* This can be useful for separating specific styles into a different file.
+
+>See full source code for this section [14-media-queries.html](https://github.com/sidneyshafer/css-sandbox/blob/master/src/14-media-queries.html)
 
 <kbd> <br> [Back to Top](#table-of-contents) <br> </kbd>
