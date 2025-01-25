@@ -75,6 +75,9 @@
     * [Widescreen](#widescreen-min-width-1201px)
     * [Landscape](#landscape-max-height-500px)
     * [Using an External Stylesheet](#external-stylesheet-for-conditional-styling)
+* **[Em and Rem Units](#em-and-rem-units)**
+    * [Overview](#overview-of-em-and-rem)
+    * [Code Breakdown](#em-and-rem-code-breakdown)
 
 ## CSS Basics
 
@@ -1325,5 +1328,76 @@ Media queries allow conditional application of CSS rules based on device propert
 * This can be useful for separating specific styles into a different file.
 
 >See full source code for this section [14-media-queries.html](https://github.com/sidneyshafer/css-sandbox/blob/master/src/14-media-queries.html)
+
+<kbd> <br> [Back to Top](#table-of-contents) <br> </kbd>
+
+## Em and Rem Units
+
+### Overview of `em` and `rem`
+
+**`em`**:
+    * Relative to the font size of the parent element.
+    * If an element’s parent has a font size of `16px`, `1em` equals `16px`. If the parent changes, em adjusts accordingly.
+    * Commonly used for padding, margin, and font sizes.
+
+**`rem`**:
+    * Relative to the font size of the root element (`html` element).
+    * `rem` values remain consistent regardless of the nesting structure.
+    * Easier to maintain and provides more predictable behavior.
+
+### `em` and `rem` Code Breakdown
+
+**Setting a Root Font Size**
+```
+html {
+   font-size: 10px;
+}
+```
+* Sets the base font size of the entire document to `10px`. This means:
+    * `1rem = 10px`
+
+**Box 1**
+```
+html {
+   font-size: 10px;
+}
+```
+* Sets the font size for `#box-1` to `20px`. This affects all child elements unless they override it.
+
+```
+#box-1 p {
+   font-size: 1.5em;
+   padding: 1em;
+}
+```
+* `font-size: 1.5em`: 1.5 times the parent font size (i.e., `20px × 1.5 = 30px`). 30px is set as the font size value for all paragraph child elements of `#box-1`.
+* `padding: 1em`: Padding is equal to the computed font size of the `<p>` element, which is 30px.
+
+```
+#box-1 ul {
+   font-size: 1.2em;
+}
+```
+* `font-size`: 1.2em: 1.2 times the parent font size (i.e., `20px × 1.2 = 24px`).
+
+**Box 2**
+```
+#box-2 h3 {
+   font-size: 2.3rem;
+}
+```
+* `font-size: 2.3rem`: 2.3 times the root font size (which was set to `10px`).
+* `10px × 2.3 = 23px`.
+
+```
+#box-2 p {
+   font-size: 1.6rem;
+   line-height: 1.7rem;
+}
+```
+* `font-size: 1.6rem`: 1.6 times the root font size (i.e., `10px × 1.6 = 16px`).
+* `line-height: 1.7rem`: Line height is `10px × 1.7 = 17px`.
+
+>See full source code for this section [15-em-rem.html](https://github.com/sidneyshafer/css-sandbox/blob/master/src/15-em-rem.html)
 
 <kbd> <br> [Back to Top](#table-of-contents) <br> </kbd>
