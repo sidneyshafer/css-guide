@@ -1336,14 +1336,14 @@ Media queries allow conditional application of CSS rules based on device propert
 ### Overview of `em` and `rem`
 
 **`em`**:
-    * Relative to the font size of the parent element.
-    * If an element’s parent has a font size of `16px`, `1em` equals `16px`. If the parent changes, em adjusts accordingly.
-    * Commonly used for padding, margin, and font sizes.
+* Relative to the font size of the parent element.
+* If an element’s parent has a font size of `16px`, `1em` equals `16px`. If the parent changes, em adjusts accordingly.
+* Commonly used for padding, margin, and font sizes.
 
 **`rem`**:
-    * Relative to the font size of the root element (`html` element).
-    * `rem` values remain consistent regardless of the nesting structure.
-    * Easier to maintain and provides more predictable behavior.
+* Relative to the font size of the root element (`html` element).
+* `rem` values remain consistent regardless of the nesting structure.
+* Easier to maintain and provides more predictable behavior.
 
 ### `em` and `rem` Code Breakdown
 
