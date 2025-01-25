@@ -90,6 +90,12 @@
         * [flex-grow](#flex-grow)
         * [flex-shrink](#flex-shrink)
         * [flex-basis](#flex-basis)
+* **[Flexbox Alignment](#flexbox-alignment)**
+    * [Flexbox Alignment Overview](#flexbox-alignment-overview)
+    * [Flexbox Alignment Properties](#flexbox-alignment-properties)
+        * [Aligning Along the Cross Axis](#aligning-along-the-cross-axis)
+        * [Aligning Along the Main Axis](#aligning-along-the-main-axis)
+        * [Per-Item Cross-Axis Alignment](#per-item-cross-axis-alignment)
 
 ## CSS Basics
 
@@ -1501,5 +1507,76 @@ header {
 * Here, each item starts with a base width of `200px`.
 
 >See full source code for this section [17-flex-basics.html](https://github.com/sidneyshafer/css-sandbox/blob/master/src/17-flex-basics.html)
+
+<kbd> <br> [Back to Top](#table-of-contents) <br> </kbd>
+
+## Flexbox Alignment
+
+### Flexbox Alignment Overview
+
+![Diagram of CSS Flexbox Alignment](/src/img/flex-alignment.png)
+
+In CSS Flexbox, alignment is controlled along two axes:
+* **Main Axis**: The direction in which items are placed (defined by `flex-direction`).
+* **Cross Axis**: Perpendicular to the main axis.
+
+>**Full Code example in [18-flex-align.html](https://github.com/sidneyshafer/css-sandbox/blob/master/src/18-flex-align.html).**
+
+**In this example, the `.flex-container` is a flex container, and the `.item` elements inside it are flex items.**
+
+### Flexbox Alignment Properties
+
+#### Aligning Along the Cross Axis
+```
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 50vh;
+}
+```
+* `align-items`: Aligns all flex items along the **cross axis**.
+* **Possible values include:**
+    * `flex-start`: Items align at the start of the cross axis.
+    * `flex-end`: Items align at the end of the cross axis.
+    * `center`: Items are centered along the cross axis.
+    * `stretch` (default): Items stretch to fill the cross axis if they lack a height.
+    * `baseline`: Items align based on their text's baseline.
+* `align-items: center;` centers all items vertically within the container's height (`50vh`).
+
+#### Aligning Along the Main Axis
+```
+justify-content: center;
+```
+* `justify-content`: Aligns all flex items along the **main axis**.
+* **Possible values include:**
+    * `flex-start` (default): Items align at the start of the main axis.
+    * `flex-end`: Items align at the end of the main axis.
+    * `center`: Items are centered along the main axis.
+    * `space-around`: Items are spaced evenly with gaps between items and edges.
+    * `space-between`: Items are spaced evenly, with no space at the edges.
+    * `space-evenly`: Items are evenly distributed with equal space between and around them.
+* `justify-content: center;` centers all items horizontally.
+
+#### Per-Item Cross-Axis Alignment
+```
+.item-1 {
+    align-self: flex-start;
+}
+.item-3 {
+    align-self: flex-end;
+}
+```
+* `align-self`:  Overrides `align-items` for a specific flex item, aligning it differently along the **cross axis**.
+* **Possible values include: (sames as `align-items`)**
+    * `flex-start`: Items align at the start of the cross axis.
+    * `flex-end`: Items align at the end of the cross axis.
+    * `center`: Items are centered along the cross axis.
+    * `stretch` (default): Items stretch to fill the cross axis if they lack a height.
+    * `baseline`: Items align based on their text's baseline.
+* `.item-1` has `align-self: flex-start;`, so it aligns at the top of the container, ignoring `align-items: center`.
+* `.item-3` has `align-self: flex-end;`, so it aligns at the bottom of the container.
+
+>See full source code for this section [18-flex-align.html](https://github.com/sidneyshafer/css-sandbox/blob/master/src/18-flex-align.html)
 
 <kbd> <br> [Back to Top](#table-of-contents) <br> </kbd>
