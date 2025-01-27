@@ -1,4 +1,4 @@
-# CSS Sandbox Part 1
+# A Guide to Learning CSS3
 
 >Snippets, examples, and code breakdowns for learning the basics of CSS..
 
