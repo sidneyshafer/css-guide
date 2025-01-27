@@ -1,6 +1,6 @@
 # A Guide to Learning CSS3
 
->Snippets, examples, and code breakdowns for learning the basics of CSS..
+>Snippets, examples, and code breakdowns for learning the basics of CSS3.
 
 ## Table of Contents
 
